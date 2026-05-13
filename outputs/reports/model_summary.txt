@@ -1,0 +1,31 @@
+Machine Learning Model Summary
+================================
+
+Accuracy: 1.0
+Training Rows: 750
+Testing Rows: 250
+
+Confusion Matrix:
+[[220, 0], [0, 30]]
+
+Top Feature Drivers:
+- anomaly_type_Normal: 0.3345
+- multi_domain_pressure_score: 0.1245
+- mission_risk_score: 0.114
+- sensor_degradation_index: 0.0895
+- cyber_pressure_index: 0.0374
+- communication_latency_ms: 0.0353
+- risk_level_Low: 0.028
+- radar_signal_strength: 0.0268
+- radar_health_score: 0.0261
+- satellite_stability_score: 0.0257
+
+Classification Report:
+              precision    recall  f1-score   support
+
+           0       1.00      1.00      1.00       220
+           1       1.00      1.00      1.00        30
+
+    accuracy                           1.00       250
+   macro avg       1.00      1.00      1.00       250
+weighted avg       1.00      1.00      1.00       250
