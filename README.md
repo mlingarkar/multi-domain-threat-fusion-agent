@@ -326,31 +326,55 @@ This section displays generated PNG charts that summarize mission risk levels, a
 
 ## Visualizations
 
-The project creates visual outputs that summarize multi-domain mission risk patterns.
+Running `python src/main.py` creates four saved PNG images in the `outputs/figures/` folder. These images summarize mission risk levels, anomaly behavior over time, domain-level risk contribution, and average mission risk by mission phase and region type. The Streamlit dashboard provides an interactive version of this analysis.
+
+---
 
 ### Risk Level Distribution
 
-Shows how many mission events fall into each risk category.
-
 ![Risk Level Distribution](outputs/figures/risk_level_distribution.png)
+
+This saved image shows how many synthetic mission events fall into each mission risk category: Low, Moderate, High, and Critical.
+
+Risk levels are assigned using the project’s mission risk scoring logic, which combines radar health, satellite stability, UAV operational status, communications reliability, cyber pressure, environmental severity, sensor degradation, and multi-domain pressure.
+
+This view is useful because it gives a quick summary of the overall mission-risk profile. If many events fall into the High or Critical categories, the simulated mission environment may require closer analyst review or escalation.
+
+---
 
 ### Anomaly Timeline
 
-Shows mission risk scores over time and highlights synthetic anomaly events.
-
 ![Anomaly Timeline](outputs/figures/anomaly_timeline.png)
+
+This saved image shows mission risk scores over time and highlights synthetic anomaly events.
+
+The timeline helps show whether high-risk or anomalous activity is isolated or clustered during specific periods. A cluster of anomalous events may suggest a simulated period of elevated mission stress, such as radar degradation, satellite telemetry instability, cyber pressure, communications disruption, or multi-domain escalation.
+
+This view is useful because timing matters in mission analysis. A single unusual event may be important, but multiple unusual events occurring close together can indicate a larger operational pattern.
+
+---
 
 ### Domain Risk Contribution
 
-Shows the average contribution of radar, satellite, UAV, communications, cyber, and environmental indicators.
-
 ![Domain Risk Contribution](outputs/figures/domain_risk_contribution.png)
+
+This saved image compares the average risk contribution from each simulated operational domain.
+
+The domains include radar, satellite, UAV, communications, cyber, and environmental indicators. Each domain contributes to the overall mission risk score based on its simulated health, reliability, pressure, or severity.
+
+This view helps explain which domains are contributing most strongly to mission risk. For example, higher cyber contribution may suggest elevated cyber pressure, while higher communications contribution may point to latency, packet loss, or degraded communication reliability.
+
+---
 
 ### Mission Risk Heatmap
 
-Shows average mission risk by mission phase and region type.
-
 ![Mission Risk Heatmap](outputs/figures/mission_risk_heatmap.png)
+
+This saved image shows average mission risk by mission phase and region type.
+
+Instead of looking at individual mission events one by one, this view summarizes how risk changes across different operational contexts. Certain mission phases or region types may show higher average risk due to environmental severity, communications reliability issues, sensor degradation, cyber pressure, or multi-domain stress.
+
+This view is useful for identifying where mission risk tends to concentrate across the simulated dataset. It helps connect individual event-level risk scoring to a broader mission-planning or analyst-review perspective.
 
 ---
 
