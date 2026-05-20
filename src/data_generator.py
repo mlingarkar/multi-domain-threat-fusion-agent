@@ -1,10 +1,5 @@
 """
 Synthetic Multi-Domain Defense Event Data Generator
-
-This module creates synthetic mission-event data across multiple domains:
-radar, satellite telemetry, UAV status, communications, cyber activity,
-and environmental conditions.
-
 """
 
 from pathlib import Path
